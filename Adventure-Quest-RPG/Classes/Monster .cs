@@ -6,14 +6,37 @@ using System.Threading.Tasks;
 
 namespace Adventure_Quest_RPG_.Classes
 {
-    public abstract class Monster : Characters
+    public abstract class Monster
     {
-        public Monster(string Name, int Health, int AttackPower, int Defense) :
-            base(Name, Health, AttackPower, Defense)
+
+
+        public string MonstorName { get; set; }
+        public int MonstorHealth { get; set; }
+        public int MonstorAttackPower { get; set; }
+
+        public int MonstorDefense { get; set; }
+
+        public bool isAtacker { get; set; }
+
+
+        public Monster(string Name, int Health, int AttackPower, int Defense)
+
         {
+            this.MonstorName = Name;
+            this.MonstorHealth = Health;
+            this.MonstorAttackPower = AttackPower;
+            this.MonstorDefense = Defense;
+            isAtacker = true;
 
         }
-     
-    
+
+
+
+
+
     }
+
+
+
+
 }
