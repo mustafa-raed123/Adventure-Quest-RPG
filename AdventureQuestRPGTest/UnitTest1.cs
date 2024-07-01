@@ -22,9 +22,6 @@ namespace AdventureQuestRPGTest
 
             Assert.True(MonsterHealthBefore > MonsterHealthAfter);
 
-
-
-
         }
         [Fact]
         public void MonstorAttacker()
