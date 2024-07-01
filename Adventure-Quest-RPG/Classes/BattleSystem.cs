@@ -95,6 +95,8 @@ namespace Adventure_Quest_RPG_.Classes
 
             }
             isAttacker = false;
+
+
             return true;
 
         }
