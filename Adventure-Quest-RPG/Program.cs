@@ -18,6 +18,8 @@ namespace Adventure_Quest_RPG_
             BattleSystem battleSystem = new BattleSystem();
 
             battleSystem.StartBattle(player, monster);
+
+
         }
 
     }
