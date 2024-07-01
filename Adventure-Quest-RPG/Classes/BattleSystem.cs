@@ -23,11 +23,11 @@ namespace Adventure_Quest_RPG_.Classes
             Console.WriteLine("\t\t----------------------------------------------");
 
         }
-  
- 
+
+
         public void StartBattle(Player Player, clsMonster Enemy)
         {
-           // StartBattleScreen();
+            // StartBattleScreen();
 
             while (Player.PlayerHealth > 0 && Enemy.MonstorHealth > 0)
             {
@@ -57,19 +57,19 @@ namespace Adventure_Quest_RPG_.Classes
             Attacker.PlayerAttackPower = Power;
 
             if (Target.MonstorDefense < Power)
-            {               
+            {
                 //DamageValue += Power;
                 Console.WriteLine($"\n\t\tPlayer Attack Power : + {Power}");
                 Console.WriteLine($"\n\t\tDamage Value : - {Power}");
                 if (Attacker.PlayerHealth < 100)
                 {
-                  Attacker.IncreaseHealth(Power);               
+                    Attacker.IncreaseHealth(Power);
                 }
                 Console.WriteLine($"\n\t\tYour Level Up To {++Level} And Your Health Up to {Attacker.PlayerHealth}");
                 Target.MonstorHealth = Target.MonstorHealth - Power;
                 if (Target.MonstorHealth > 0)
                 {
-                    Console.WriteLine($"\n\t\tThe Helth Of Target :{Target.MonstorHealth}\n");             
+                    Console.WriteLine($"\n\t\tThe Helth Of Target :{Target.MonstorHealth}\n");
                 }
                 else
                 {
@@ -80,17 +80,17 @@ namespace Adventure_Quest_RPG_.Classes
             }
             else
             {
-                
+
                 Console.WriteLine($"\n\t\tThe target is defensed ");
                 Console.WriteLine($"\n\t\t the Attacter power is {Attacker.PlayerAttackPower}");
-                Console.WriteLine($"\n\t\t the Attackter power after defense is  {Attacker.PlayerAttackPower / 2 }");
+                Console.WriteLine($"\n\t\t the Attackter power after defense is  {Attacker.PlayerAttackPower / 2}");
 
                 Target.MonstorHealth -= (Attacker.PlayerAttackPower / 2);
 
                 Console.WriteLine($"\n\t\tThe Helth Of Target :{Target.MonstorHealth}");
 
                 Console.WriteLine($"\n\t\tThe Helth Of the Player : {Attacker.PlayerHealth}");
-                
+
 
 
             }
@@ -110,7 +110,7 @@ namespace Adventure_Quest_RPG_.Classes
             if (Target.PlayerDefense < Power)
             {
                 Power = GetRandomlyAttack();
-                
+
                 Console.WriteLine($"\n\t\tMonster Attack Power : + {Power}");
                 Console.WriteLine($"\n\t\tDamage Value : - {Power}");
                 Console.WriteLine($"\n\t\t The Monster Health :  {Attacker.MonstorHealth}");
@@ -137,7 +137,7 @@ namespace Adventure_Quest_RPG_.Classes
 
                 Console.WriteLine($"\n\t\tThe Helth Of Target :{Target.PlayerHealth}");
                 Console.WriteLine($"\n\t\tThe Helth Of the Monster : {Attacker.MonstorHealth}");
-                          
+
             }
             isAttacker = true;
             return true;
@@ -157,6 +157,6 @@ namespace Adventure_Quest_RPG_.Classes
             return DefenseValue = (random.Next(10, 15));
         }
 
-        
+
     }
 }
