@@ -11,7 +11,7 @@ namespace Adventure_Quest_RPG_.Classes
     {
         bool isAttacker = true;
         int AttackingCount = 0;
-        int DamageValue = 0;
+        //int DamageValue = 0;
         int Level = 1;
 
         private void StartBattleScreen()
@@ -58,7 +58,7 @@ namespace Adventure_Quest_RPG_.Classes
 
             if (Target.MonstorDefense < Power)
             {               
-                DamageValue += Power;
+                //DamageValue += Power;
                 Console.WriteLine($"\n\t\tPlayer Attack Power : + {Power}");
                 Console.WriteLine($"\n\t\tDamage Value : - {Power}");
                 if (Attacker.PlayerHealth < 100)
